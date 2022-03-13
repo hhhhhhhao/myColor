@@ -57,5 +57,12 @@ const config: IConfig = {
       changeOrigin: true,
     },
   },
+  theme:{
+    //menu
+    'menu-item-color':'#462e68',
+    'menu-item-active-bg':"#462e68",
+    'menu-item-active-border-width': '0px',
+    'menu-item-vertical-margin':'20px',
+  }
 };
 export default config;

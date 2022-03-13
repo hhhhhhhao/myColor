@@ -4,4 +4,10 @@ html, body, #root {
 
 body {
   margin: 0;
+  font-family: SourceHan,Georgia, sans-serif;
+}
+
+@font-face {
+  font-family: SourceHan;
+  src: url('./assets/font/SourceHanSerifCN-SemiBold-7.otf');
 }
