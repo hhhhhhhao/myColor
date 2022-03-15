@@ -1,30 +1,17 @@
 import React,{ useEffect }  from 'react';
 import styles from './index.less';
-import  axios  from 'axios'
 import Link from 'umi/link';
-import router from 'umi/router';
 import Stars from '../pages/components/stars';
+import Collapse from './components/collapse';
 
-export default function() {
-  async function getDate(){
-    axios.get('/api')
-    .then((res)=>{
-    console.log(res);
-      console.log(res);
-    })
-  }
-  useEffect(() => {
-    getDate()
-  })
-
-  return (
+export default function() {return (
     <div className={styles.normal}>
       <div className={styles.sky}>
         <Stars num={500}></Stars>
-        <div style={{position:"relative"}}>
+        <div style={{position:"relative"}} className={styles.illustration}>
+          <img src={require('../assets/picture/cat.gif')} className={styles.cat}></img>
           <img src={require('../assets/picture/houseandpeople.png')} className={styles.house}></img>
           <div className={styles.oricl}></div>
-          <img src={require('../assets/picture/cat.gif')} className={styles.cat}></img>
         </div>
         <div className={styles.cloud}>
           <img src={require('../assets/picture/cloud1.png')} className={styles.cloud1}></img>
@@ -34,9 +21,9 @@ export default function() {
           <img src={require('../assets/picture/cloud5.png')} className={styles.cloud5}></img>
         </div>
       </div>
-      <ul className={styles.list}>
-        <li>大多数水水水水水水水水水水</li>
-      </ul>
+
+      <div className={styles.collapse}><Collapse></Collapse></div>
+
       <Link to="/test">Go to test page</Link>
     </div>
   );

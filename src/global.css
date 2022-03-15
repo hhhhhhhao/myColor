@@ -5,6 +5,7 @@ html, body, #root {
 body {
   margin: 0;
   font-family: SourceHan,Georgia, sans-serif;
+  user-select: none;
 }
 
 @font-face {

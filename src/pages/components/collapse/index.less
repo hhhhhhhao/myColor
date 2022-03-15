@@ -1,0 +1,63 @@
+@collapseWidth:200px;
+@collapseHeight:200px;
+.word {
+  position: absolute;
+  top: 320px;
+  left: 700px;
+  width: 250px;
+  z-index: 2;
+  text-align: right;
+  color: white;
+  .wordTitle {
+    font-size: 50px;
+  }
+  .wordSubTitle {
+    font-size: 10px;
+    line-height: -1px;
+  }
+  .wordButton {
+    background-color: #241a2e;
+    color: white;
+    border: 0;
+    border-radius: 0;
+    width: 100px;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  }
+  /* .wordButton:hover,
+  .wordButton:active {
+    border: 0;
+    color: white;
+    background-color: #241a2e;
+  } */
+
+  @keyframes foldToUnfoldAn {
+    0% {
+      width: @collapseWidth;
+    }
+    100% {
+      width: 0;
+    }
+  }
+
+  @keyframes unfoldToFoldAn {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: @collapseWidth;
+    }
+  }
+
+  .collapse {
+    width: 0;
+    height: @collapseHeight;
+    background-color: red;
+    color: white;
+    &.foldToUnfold {
+      animation: foldToUnfoldAn .5s ease-in-out 0s 1 forwards;
+    }
+    &.unfoldToFold {
+      animation: unfoldToFoldAn .5s ease-in-out 0s 1 forwards;
+    }
+  }
+}

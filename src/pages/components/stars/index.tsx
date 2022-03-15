@@ -30,7 +30,7 @@ export default function(props:propsType) {
   return (
     <div>
       {
-        [...Array(props.num)].map((ind)=>{
+        [...Array(props.num)].map(()=>{
           return <div style={starsVariable()} className={`${styles.stars} ${styles.blinking}`}></div>
         })
       }

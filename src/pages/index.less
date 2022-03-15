@@ -36,54 +36,56 @@
     height: 560px;
     background: linear-gradient(-45deg,#462e68,70%,#231a2d);
     overflow: hidden !important;
+    //transform: scale(2) translate(-385px,-100px);
+    .illustration{
+        z-index: 2;
+        .house{
+        position: absolute;
+        top: 350px;
+        left: 1050px;
+        width: 500px;
+      }
 
-    .house{
-      position: absolute;
-      z-index: 2;
-      top: 350px;
-      left: 1050px;
-      width: 500px;
-    }
-
-    .oricl{
-      position: absolute;
-      z-index: 3;
-      top: 410px;
-      left: 1380px;
-      width:@oriclWidth;
-      height:@oriclHeight;
-      background:@oriclColor;
-      animation: shine .7s linear 0s infinite;
-      filter: blur(10px);
-      opacity: 0.5;
-    }
-
-    .cat{
-      position: absolute;
-      top: 440px;
-      left: 1180px;
-      width: 150px;
-      transform: rotate(12deg);
-    }
+      .oricl{
+        position: absolute;
+        z-index: 3;
+        top: 410px;
+        left: 1380px;
+        width:@oriclWidth;
+        height:@oriclHeight;
+        background:@oriclColor;
+        animation: shine .7s linear 0s infinite;
+        filter: blur(10px);
+        opacity: 0.5;
+      }
   
-    .oricl:before{
-      content:'';
-      width:@oriclWidth;
-      height:@oriclHeight;
-      position:absolute;
-      transform:skewX(30deg);
-      background:@oriclColor;
-      left:-15px;
-    }
-
-    .oricl:after{
-      content:'';
-      width:@oriclWidth;
-      height:@oriclHeight;
-      position:absolute;
-      transform:skewX(-30deg);
-      background:@oriclColor;
-      right:-15px;
+      .cat{
+        position: absolute;
+        top: 440px;
+        left: 1180px;
+        width: 150px;
+        transform: rotate(12deg);
+      }
+    
+      .oricl:before{
+        content:'';
+        width:@oriclWidth;
+        height:@oriclHeight;
+        position:absolute;
+        transform:skewX(30deg);
+        background:@oriclColor;
+        left:-15px;
+      }
+  
+      .oricl:after{
+        content:'';
+        width:@oriclWidth;
+        height:@oriclHeight;
+        position:absolute;
+        transform:skewX(-30deg);
+        background:@oriclColor;
+        right:-15px;
+      }
     }
 
     .cloud{
@@ -141,4 +143,10 @@
     }
   }
 
+  .collapse{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: -400px;
+  }
 }
