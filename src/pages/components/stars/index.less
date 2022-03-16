@@ -1,36 +1,35 @@
-@speed:50s;
-@roteteRadius:800px;
-.stars{
-    position: fixed;
-    background-color: #d7ccee;
-    animation: rotate @speed ease-in-out 0s infinite reverse;
+@speed: 50s;
+@roteteRadius: 800px;
+.stars {
+  position: fixed;
+  background-color: #d7ccee;
+  animation: rotate @speed ease-in-out 0s infinite reverse;
 }
 
-.blinking:nth-child(2n+60){
-    animation: blinking 1s linear 1s infinite, rotate @speed ease-in-out 0s infinite reverse;
+.blinking:nth-child(2n + 60) {
+  animation: blinking 1s linear 1s infinite, rotate @speed ease-in-out 0s infinite reverse;
+}
+
+.blinking:nth-child(3n + 60) {
+  animation: blinking 0.7s linear 0s infinite, rotate @speed ease-in-out 0s infinite reverse;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0.8;
   }
-
-.blinking:nth-child(3n+60){
-  animation: blinking .7s linear 0s infinite, rotate @speed ease-in-out 0s infinite reverse;
-}
-
-@keyframes blinking{
-    0%{
-        opacity: 0.8;
-        
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-@keyframes rotate{
-  0%{
-      transform: rotate(0deg);
-      transform-origin: 50% @roteteRadius;
+  100% {
+    opacity: 1;
   }
-  100%{
-      transform: rotate(60deg);
-      transform-origin: 50% @roteteRadius;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 50% @roteteRadius;
+  }
+  100% {
+    transform: rotate(60deg);
+    transform-origin: 50% @roteteRadius;
   }
 }

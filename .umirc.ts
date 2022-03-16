@@ -8,16 +8,20 @@ const config: IConfig = {
       component: '../layouts/index',
       routes: [
         {
-          path: '/test',
-          component: './test/index',
-        },
-        {
           path: '/policy',
           component: './policy/index',
         },
         {
           path: '/analysis',
           component: './analysis/index',
+        },
+        {
+          path: '/explain',
+          component: './explain/index',
+        },
+        {
+          path: '/test',
+          component: './test/index',
         },
         {
           path: '/',
@@ -57,12 +61,12 @@ const config: IConfig = {
       changeOrigin: true,
     },
   },
-  theme:{
+  theme: {
     //menu
-    'menu-item-color':'#462e68',
-    'menu-item-active-bg':"#462e68",
+    'menu-item-color': '#462e68',
+    'menu-item-active-bg': '#462e68',
     'menu-item-active-border-width': '0px',
-    'menu-item-vertical-margin':'20px',
-  }
+    'menu-item-vertical-margin': '20px',
+  },
 };
 export default config;

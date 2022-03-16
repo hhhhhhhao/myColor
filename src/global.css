@@ -1,14 +1,39 @@
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 
 body {
   margin: 0;
-  font-family: SourceHan,Georgia, sans-serif;
+  font-family: SourceHan, Georgia, sans-serif;
   user-select: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 @font-face {
   font-family: SourceHan;
   src: url('./assets/font/SourceHanSerifCN-SemiBold-7.otf');
+}
+
+.explainShowBtn-enter {
+  transform: translateY(-100px);
+  transition: transform .7s;
+}
+
+.explainShowBtn-enter-active {
+  transform: translateY(0px);
+  transition: transform .7s;
+}
+
+.explainShowBtn-exit {
+  transform: translateY(-100px);
+  transition: transform .7s;
+
+}
+
+.explainShowBtn-exit-active {
+  transform: translateY(100px);
+  transition: transform .7s;
 }

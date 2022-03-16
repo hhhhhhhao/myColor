@@ -1,0 +1,42 @@
+.normal {
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+
+  .up {
+    position: fixed;
+    padding-top: 20px;
+    color: #231a2d;
+    z-index: 2;
+    left: 50%;
+  }
+
+  .one {
+    background-color: red;
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+  }
+
+  .two {
+    background-color: blue;
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+  }
+
+  .three {
+    background-color: grey;
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+  }
+
+  .four {
+    background-color: green;
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+  }
+}
