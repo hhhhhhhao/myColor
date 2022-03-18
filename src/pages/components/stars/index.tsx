@@ -4,7 +4,7 @@ import styles from './index.less';
 type propsType = {
   num: number;
 };
-export default function(props: propsType) {
+const Stars = (props: propsType) => {
   const randomNumber = (min: number, max: number) => {
     return Math.ceil(Math.random() * (max - min) + min);
   };
@@ -16,7 +16,7 @@ export default function(props: propsType) {
     const filterVal = Math.random().toFixed(2);
 
     return {
-      position: 'fixed',
+      position: 'absolute',
       top: String(topVal - 850) + 'px',
       left: String(heightVal - 850) + 'px',
       borderRadius: '50%',
@@ -29,9 +29,13 @@ export default function(props: propsType) {
 
   return (
     <div>
-      {[...Array(props.num)].map(() => {
-        return <div style={starsVariable()} className={`${styles.stars} ${styles.blinking}`}></div>;
+      {[...Array(props.num)].map((value,index) => {
+        return <div style={starsVariable()} key={index} className={`${styles.stars} ${styles.blinking}`}></div>;
       })}
     </div>
   );
-}
+};
+
+export default React.memo(Stars, () => {
+  return true;
+});

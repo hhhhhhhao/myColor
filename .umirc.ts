@@ -9,15 +9,11 @@ const config: IConfig = {
       routes: [
         {
           path: '/policy',
-          component: './policy/index',
+          component: './test/colorTest/index',
         },
         {
           path: '/analysis',
           component: './analysis/index',
-        },
-        {
-          path: '/explain',
-          component: './explain/index',
         },
         {
           path: '/test',

@@ -1,0 +1,65 @@
+.normal {
+  .rightBar {
+    position: fixed;
+    top: 10%;
+    left: 95%;
+    z-index: 2;
+    .switch {
+      z-index: 2;
+      color: #241a2e;
+      border: 0;
+      border-radius: 0;
+      width: 100px;
+      transform: rotate(-45deg) scale(2);
+      transition: color 0.5s, transform 0.5s;
+      &.switchLeft {
+        transform: rotate(-45deg) scale(2);
+        transition: transform 0.5s;
+      }
+      &.switchRight {
+        transform: rotate(45deg) scale(2);
+        transition: transform 0.5s;
+      }
+    }
+    .startOrBack {
+      position: relative;
+      font-size: 20px;
+      writing-mode: vertical-lr;
+      opacity: 0;
+      color: #1890ff;
+      &.startOrBackShow {
+        animation: startOrBackShowAn 0.4s ease-in-out 0s 1 forwards;
+      }
+
+      &.startOrBackFade {
+        animation: startOrBackFadeAn 0.4s ease-in-out 0s 1 forwards;
+      }
+    }
+  }
+  .switch:hover {
+    color: #1890ff;
+    transition: color 0.5s;
+  }
+}
+
+@keyframes topToBott {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 80px;
+  }
+}
+
+@keyframes startOrBackShowAn {
+  0% {
+    opacity: 0;
+    top: -10px;
+    left: 35px;
+  }
+  100% {
+    opacity: 1;
+    left: 35px;
+    top: 20px;
+  }
+}

@@ -5,7 +5,7 @@ import { connect } from 'dva';
 import { CloseSquareOutlined } from '@ant-design/icons';
 import { GlobalModelIF } from '@/interfaces/global';
 import { foldFunc } from '@/utils/general';
-interface CollapseProps extends Pick<GlobalModelIF, 'dispatch' | 'fold' | 'test'> { }
+interface CollapseProps extends Pick<GlobalModelIF, 'dispatch' | 'fold' | 'test'> {}
 
 const Collapse = (props: CollapseProps) => {
   const { dispatch, test, fold } = props;
@@ -27,8 +27,9 @@ const Collapse = (props: CollapseProps) => {
         介绍
       </Button>
       <div
-        className={`${styles.collapse} ${fold === true ? styles.unfoldToFold : fold === false ? styles.foldToUnfold : ''
-          }`}
+        className={`${styles.collapse} ${
+          fold === true ? styles.unfoldToFold : fold === false ? styles.foldToUnfold : ''
+        }`}
       >
         {fold ? (
           <div className={styles.board}>
