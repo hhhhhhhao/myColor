@@ -1,35 +1,40 @@
 .normal {
-  overflow: scroll;
-  overflow-x: hidden;
-  height: 90vh;
-  scroll-snap-type: y mandatory;
-  .first {
-    height: 100vh;
-    scroll-snap-align: start;
-    position: relative;
-    background-color: white;
-  }
+  .scrollSnap {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 90vh;
+    scroll-snap-type: y mandatory;
+    .first {
+      height: 100vh;
+      scroll-snap-align: start;
+      position: relative;
+      background-color: white;
+    }
 
-  .second {
-    height: 100vh;
-    scroll-snap-align: start;
-    position: relative;
-  }
+    .second {
+      height: 100vh;
+      scroll-snap-align: start;
+      position: relative;
+    }
 
-  .third {
-    height: 100vh;
-    scroll-snap-align: start;
-    position: relative;
-  }
+    .third {
+      height: 100vh;
+      scroll-snap-align: start;
+      position: relative;
+    }
 
-  .fourth {
-    height: 100vh;
-    scroll-snap-align: start;
-    position: relative;
+    .fourth {
+      height: 100vh;
+      scroll-snap-align: start;
+      position: relative;
+    }
+    .fifth {
+      height: 100vh;
+      scroll-snap-align: start;
+      position: relative;
+    }
   }
-  .fifth {
-    height: 100vh;
-    scroll-snap-align: start;
-    position: relative;
+  .scrollSnap::-webkit-scrollbar {
+    width: 0px;
   }
 }

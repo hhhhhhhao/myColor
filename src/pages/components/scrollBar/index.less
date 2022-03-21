@@ -1,0 +1,30 @@
+@barHeight: 100px;
+.normal {
+  z-index: 3;
+  position: fixed;
+  top: 5%;
+  left: 92%;
+  .numberCounts{
+    position: absolute;
+    top: 110px;
+  }
+  .nowBar {
+    width: 50px;
+    height: @barHeight;
+    border-right: 1.5px #ffffff solid;
+    position: relative;
+    top: @barHeight;
+  }
+  .scrollBar {
+    .bar {
+      width: 50px;
+      height: @barHeight;
+      border-right: 1px #858585 solid;
+      transition: border-right;
+    }
+    .bar:hover {
+      border-right: 1px #b8b8b8 solid;
+      transition: border-right;
+    }
+  }
+}

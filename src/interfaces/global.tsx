@@ -3,6 +3,7 @@ export interface GlobalModelIF {
   fold: boolean | null;
   explainShow: boolean;
   test: any;
+  currentNumber: number;
 }
 
 export interface EffectsPCEIF {

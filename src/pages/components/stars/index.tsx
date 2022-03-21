@@ -29,8 +29,14 @@ const Stars = (props: propsType) => {
 
   return (
     <div>
-      {[...Array(props.num)].map((value,index) => {
-        return <div style={starsVariable()} key={index} className={`${styles.stars} ${styles.blinking}`}></div>;
+      {[...Array(props.num)].map((value, index) => {
+        return (
+          <div
+            style={starsVariable()}
+            key={index}
+            className={`${styles.stars} ${styles.blinking}`}
+          ></div>
+        );
       })}
     </div>
   );

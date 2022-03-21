@@ -11,16 +11,34 @@ export const Test = () => {
   const [startOrBack, setStartOrBack] = useState(0);
   return (
     <div className={styles.normal}>
-      <div className={styles.rightBar}
+      <div
+        className={styles.rightBar}
         onClick={() => {
           setStartTest(!startTest);
         }}
-        onMouseEnter={() => { setStartOrBack(1) }}
-        onMouseLeave={() => { setStartOrBack(2) }}>
+        onMouseEnter={() => {
+          setStartOrBack(1);
+        }}
+        onMouseLeave={() => {
+          setStartOrBack(2);
+        }}
+      >
         <SwapOutlined
-          className={`${styles.switch} ${startOrBack === 0 ? "" : startOrBack === 1 ? styles.switchLeft : styles.switchRight}`}
+          className={`${styles.switch} ${
+            startOrBack === 0 ? '' : startOrBack === 1 ? styles.switchLeft : styles.switchRight
+          }`}
         />
-        <div className={`${styles.startOrBack} ${startOrBack === 0 ? "" : startOrBack === 1 ? styles.startOrBackShow : styles.startOrBackFade}`}>{startTest ? '返回' : '开始测试'}</div>
+        <div
+          className={`${styles.startOrBack} ${
+            startOrBack === 0
+              ? ''
+              : startOrBack === 1
+              ? styles.startOrBackShow
+              : styles.startOrBackFade
+          }`}
+        >
+          {startTest ? '返回' : '开始测试'}
+        </div>
       </div>
 
       <div className={styles.colorTest}>

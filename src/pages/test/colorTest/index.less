@@ -7,10 +7,10 @@
   left: 25%;
   top: 50px;
   .carousel {
-      transition: filter .2s ease-in-out;
-      &.blurShow {
+    transition: filter 0.2s ease-in-out;
+    &.blurShow {
       filter: blur(50px);
-      transition: filter .2s ease-in-out;
+      transition: filter 0.2s ease-in-out;
     }
     div {
       position: relative;
@@ -45,6 +45,18 @@
     .button:hover {
       background-color: #d80000;
       transition: background-color 0.5s;
+    }
+  }
+  .timeUp {
+    position: absolute;
+    top: 48%;
+    left: 35%;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    &.wordShow {
+      opacity: 1;
+      transition: opacity 0.2s ease-in-out;
     }
   }
 }
