@@ -5,20 +5,12 @@ import { GlobalModelIF } from '@/interfaces/global';
 import Stars from '../stars/index';
 import Collapse from '../collapse/index';
 import { DownCircleOutlined } from '@ant-design/icons';
+import { scrollToHash } from '@/utils/general';
 
 interface IndexProps extends Pick<GlobalModelIF, 'dispatch' | 'fold' | 'explainShow'> {}
 
 const Illustration = (props: IndexProps) => {
   const { dispatch, fold, explainShow } = props;
-
-  const scrollToHash = (elemTo: string) => {
-    if (elemTo) {
-      let anchorElement = document.getElementById(elemTo);
-      if (anchorElement) {
-        anchorElement.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
 
   return (
     <div className={styles.normal}>
@@ -54,7 +46,7 @@ const Illustration = (props: IndexProps) => {
       <div
         onClick={() => {
           dispatch({ type: 'myColor/EXPLAINSHOWANDUNSHOW' });
-          scrollToHash('second');
+          scrollToHash('2');
         }}
         className={styles.down}
       >

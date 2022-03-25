@@ -4,7 +4,7 @@
   position: fixed;
   top: 5%;
   left: 92%;
-  .numberCounts{
+  .numberCounts {
     position: absolute;
     top: 110px;
   }
@@ -25,6 +25,14 @@
     .bar:hover {
       border-right: 1px #b8b8b8 solid;
       transition: border-right;
+    }
+    .bar::before {
+      content: '';
+      background: #fff;
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      left: 49px;
     }
   }
 }

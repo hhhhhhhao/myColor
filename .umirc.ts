@@ -20,6 +20,10 @@ const config: IConfig = {
           component: './test/index',
         },
         {
+          path: '/two/index',
+          component: './two/index',
+        },
+        {
           path: '/',
           component: '../pages/index',
         },

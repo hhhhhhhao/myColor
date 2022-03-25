@@ -23,3 +23,25 @@ export function foldFunc(fold: boolean | null, payload: boolean | null, dispatch
     }, 2000);
   }
 }
+
+export const scrollToHash = (elemTo: string) => {
+  if (elemTo) {
+    let anchorElement = document.getElementById(elemTo);
+    if (anchorElement) {
+      anchorElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+};
+
+export const debounce=(fn:Function, ms:number) =>{
+  let timer:ReturnType<typeof setTimeout>|null;
+  return function() {
+    if (timer) {
+      clearTimeout(timer)
+    }
+    timer = setTimeout(() => {
+      fn(arguments)
+      timer = null;
+    }, ms);
+  }
+}
