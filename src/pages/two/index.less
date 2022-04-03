@@ -1,36 +1,42 @@
 .normal {
-  background: #f28379;
-  .eyeBoard {
-    position: absolute;
-    top: 20%;
-    left: 60%;
-    background-color: white;
-    width: 350px;
-    height: 350px;
-    border-radius: 20px;
-    padding: 20px;
-    text-align: left;
-    .eyeName {
-      font-size: 50px;
-      margin: 0;
-    }
-    .eyeLine{
-      width: auto;
-      height: 0;
-      border-bottom: 1px solid black;
-    }
-    .eyeFunction{
-      padding-top: 10px;
+  .eyePosition {
+    &.eyeStructureShow {
+      transform: translate(-500px) scale(0.5);
+      transition: transform 1s ease-in-out;
     }
   }
-  .triangle {
-    position: absolute;
-    top: 25%;
-    left: 57%;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 40px 60px 40px 0;
-    border-color: transparent rgba(255;255;255;1) transparent transparent;
+  .eye {
+    .eyeBoard {
+      position: absolute;
+      top: 20%;
+      left: 25%;
+      writing-mode: vertical-rl;
+      text-align: justify;
+      .eyeName {
+        font-size: 25px;
+        background-color: #e1bb0d;
+        border-radius: 5px;
+        width: 50px;
+        height: 150px;
+        color: white;
+        padding-top: 5px;
+        padding-right: 5px;
+      }
+      .eyeFunction {
+        width: 50px;
+        height: 360px;
+        color: white;
+      }
+      .eyeIntroduction {
+        width: 50px;
+        height: 380px;
+        color: #ef6f56;
+      }
+    }
+    opacity: 0;
+    &.eyeStructureShow {
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
   }
 }

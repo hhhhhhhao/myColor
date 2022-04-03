@@ -6,6 +6,7 @@ import Illustration from './components/illustration/index';
 import { ScrollBar } from './components/scrollBar/index';
 import { debounce } from '@/utils/general';
 import Two from './two/index';
+import Three from './three/index';
 
 interface IndexProps extends Pick<GlobalModelIF, 'dispatch' | 'fold' | 'explainShow'> { }
 
@@ -21,7 +22,7 @@ const Index = (props: IndexProps) => {
     <div className={styles.normal}>
       <div className={styles.scrollSnap} onScroll={() => {
         debounce(() => {
-          switch (Math.ceil(Number(document.getElementById('1')?.getBoundingClientRect().y))) {
+          switch (Math.ceil(Number(document.getElementById('mainPage1')?.getBoundingClientRect().y))) {
             case 48:
               scrollBarRef.current.pageChange(0);
               break;
@@ -38,16 +39,16 @@ const Index = (props: IndexProps) => {
         }, 500)()
 
       }}>
-        <div className={styles.first} id="1">
+        <div className={styles.first} id="mainPage1">
           <Illustration></Illustration>
         </div>
-        <div className={styles.second} id="2">
+        <div className={styles.second} id="mainPage2">
           <Two></Two>
         </div>
-        <div className={styles.third} id="3">
-          3
+        <div className={styles.third} id="mainPage3">
+          <Three></Three>
         </div>
-        <div className={styles.fourth} id="4">
+        <div className={styles.fourth} id="mainPage4">
           4
         </div>
       </div>

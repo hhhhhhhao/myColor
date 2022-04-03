@@ -33,15 +33,15 @@ export const scrollToHash = (elemTo: string) => {
   }
 };
 
-export const debounce=(fn:Function, ms:number) =>{
-  let timer:ReturnType<typeof setTimeout>|null;
+export const debounce = (fn: Function, ms: number) => {
+  let timer: ReturnType<typeof setTimeout> | null;
   return function() {
     if (timer) {
-      clearTimeout(timer)
+      clearTimeout(timer);
     }
     timer = setTimeout(() => {
-      fn(arguments)
+      fn(arguments);
       timer = null;
     }, ms);
-  }
-}
+  };
+};

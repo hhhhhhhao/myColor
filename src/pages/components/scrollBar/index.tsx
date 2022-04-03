@@ -10,12 +10,9 @@ interface scrollBarProps {
 
 export const ScrollBar = React.forwardRef<HTMLInputElement | any, scrollBarProps>((props, ref) => {
   const scrollBarRef = useRef(null);
-  useImperativeHandle(
-    ref,
-    () => {
-      return { pageChange }
-    },
-  )
+  useImperativeHandle(ref, () => {
+    return { pageChange };
+  });
   const [barStyle, setbarStyle] = useState<{}>({ transform: 'translateY(0)' });
   const [numberCountsStyle, setnumberCountsStyle] = useState<{}>({ transform: 'translateY(0)' });
   const [nextNumber, setnextNumber] = useState(1);
@@ -30,9 +27,9 @@ export const ScrollBar = React.forwardRef<HTMLInputElement | any, scrollBarProps
     });
     setnextNumber(ind + 1);
 
-    scrollToHash(String(ind + 1))
-  }
-  
+    scrollToHash('mainPage'+String(ind + 1));
+  };
+
   return (
     <div className={styles.normal} ref={scrollBarRef}>
       <div className={styles.numberCounts} style={numberCountsStyle}>
@@ -46,7 +43,9 @@ export const ScrollBar = React.forwardRef<HTMLInputElement | any, scrollBarProps
             <div
               key={ind + 1}
               className={styles.bar}
-              onClick={() => { pageChange(ind) }}
+              onClick={() => {
+                pageChange(ind);
+              }}
             ></div>
           ))}
       </div>
