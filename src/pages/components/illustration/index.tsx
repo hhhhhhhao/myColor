@@ -46,7 +46,7 @@ const Illustration = (props: IndexProps) => {
       <div
         onClick={() => {
           dispatch({ type: 'myColor/EXPLAINSHOWANDUNSHOW' });
-          scrollToHash('2');
+          scrollToHash('mainPage2');
         }}
         className={styles.down}
       >

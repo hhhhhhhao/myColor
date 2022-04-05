@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styles from './index.less';
 
-const Eyes = React.forwardRef((props, ref) => (
+export const Eyes = React.forwardRef((props, ref) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -3376,5 +3376,3 @@ const Eyes = React.forwardRef((props, ref) => (
     </g>
   </svg>
 ));
-
-export default Eyes;

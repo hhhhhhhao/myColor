@@ -1,4 +1,59 @@
-
 .normal {
-  background: #79F297;
+  .arrow {
+    position: absolute;
+    top: 20%;
+    left: 57%;
+    transform: rotate(45deg);
+    .arrowLine {
+      stroke-dasharray: 400;
+      stroke-dashoffset: 0;
+      animation: dash 2.7s ease-in-out infinite;
+    }
+    .arrowHead {
+      animation: dash1 2.7s ease-in-out infinite;
+    }
+  }
+  .arrowWord {
+    position: absolute;
+    top: 18%;
+    left: 75%;
+    font-size: 50px;
+    color: #cb4627;
+    font-family: SourceHan1;
+  }
+  .arrowframe {
+    position: absolute;
+    top: 18%;
+    left: 72%;
+    z-index: 2;
+    transition: transform 0.5s;
+  }
+  .arrowframe:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 320;
+  }
+  50%{
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash1 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

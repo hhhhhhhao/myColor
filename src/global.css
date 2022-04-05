@@ -18,6 +18,11 @@ body {
   src: url('./assets/font/SourceHanSerifCN-SemiBold-7.otf');
 }
 
+@font-face {
+  font-family: SourceHan1;
+  src: url('./assets/font/HYWaiWaiTiJ.ttf');
+}
+
 /* .explainShowBtn-enter {
   transform: translateY(-100px);
   transition: transform .7s;

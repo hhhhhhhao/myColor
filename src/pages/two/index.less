@@ -1,42 +1,72 @@
 .normal {
+  perspective: 1px;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+
+  .dynamicArrow {
+    display: none;
+  }
   .eyePosition {
+    position: absolute;
+    top: 0;
+    left: 400px;
     &.eyeStructureShow {
-      transform: translate(-500px) scale(0.5);
+      transform: translate(-400px, -50px) scale(0.6);
       transition: transform 1s ease-in-out;
     }
   }
-  .eye {
-    .eyeBoard {
-      position: absolute;
-      top: 20%;
-      left: 25%;
-      writing-mode: vertical-rl;
-      text-align: justify;
-      .eyeName {
-        font-size: 25px;
-        background-color: #e1bb0d;
-        border-radius: 5px;
-        width: 50px;
-        height: 150px;
-        color: white;
-        padding-top: 5px;
-        padding-right: 5px;
-      }
-      .eyeFunction {
-        width: 50px;
-        height: 360px;
-        color: white;
-      }
-      .eyeIntroduction {
-        width: 50px;
-        height: 380px;
-        color: #ef6f56;
-      }
-    }
-    opacity: 0;
+  .eyeStructure {
+    top: 50px;
+    left: 500px;
+
+    height: 200%;
+    transform-style: preserve-3d;
+    transform: translateZ(-10px) scale(10);
+
     &.eyeStructureShow {
       opacity: 1;
       transition: opacity 1s ease-in-out;
     }
+    opacity: 0;
   }
+  .eyeBoard {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    writing-mode: vertical-rl;
+    text-align: justify;
+    .eyeName {
+      font-size: 25px;
+      background-color: #e1bb0d;
+      border-radius: 5px;
+      width: 50px;
+      height: 150px;
+      color: white;
+      padding-top: 5px;
+      padding-right: 5px;
+    }
+    .eyeFunction {
+      width: 50px;
+      height: 360px;
+      color: white;
+    }
+    .eyeIntroduction {
+      width: 50px;
+      height: 380px;
+      color: #ef6f56;
+    }
+    &.eyeStructureShow {
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
+    opacity: 0;
+  }
+  .circle{
+    transform-style: preserve-3d;
+    transform:translate3D(350em, -150em, -10px) scale(0.7);
+  }
+}
+.normal::-webkit-scrollbar {
+  width: 0px;
 }

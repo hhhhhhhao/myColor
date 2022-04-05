@@ -1,9 +1,6 @@
-@colorC:#ffff4e;
+@colorC: #ffff4e;
 .normal {
-  position: absolute;
-  top: -10%;
-  left:50%;
-  transform: scale(-1.2, -1.2) rotate(90deg);
+  transform: scale(-1.2, -1.2) rotate(90deg) translate(-200px, 400px);
   .lens,
   .cornea,
   .pupil,
@@ -24,13 +21,13 @@
   .fovea:hover {
     stroke: @colorC !important;
     stroke-width: 2 !important;
-    fill:@colorC !important;
+    fill: @colorC !important;
     transition: all 1s;
   }
-  .retina{
+  .retina {
     transition: all 1s;
   }
-  .retina:hover{
+  .retina:hover {
     stroke-width: 2 !important;
     stroke: @colorC !important;
     transition: all 1s;

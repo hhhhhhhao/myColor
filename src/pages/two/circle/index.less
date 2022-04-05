@@ -1,0 +1,19 @@
+.normal {
+  .circle {
+    stroke: #0000ff;
+    stroke-width: 8px;
+    stroke-dasharray: 0 1500;
+    animation: draw 2s forwards;
+  }
+}
+@keyframes draw {
+  0% {
+    stroke-dasharray: 0 1500;
+  }
+  40%{
+    stroke-dasharray: 1500 1500;
+  }
+  100% {
+    stroke-dasharray: 1500 1500;
+  }
+}
