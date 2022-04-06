@@ -1,0 +1,23 @@
+.fovea {
+  position: absolute;
+  top: 400px;
+  left: -100px;
+  animation: showUp 1s ease-in-out 0s 1 forwards;
+  .foveaStructure {
+    transform: rotate(90deg);
+  }
+  .cell {
+    display: flex;
+  }
+}
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 5em) scale(0.4);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0em) scale(0.4);
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './index.less';
-export const DynamicArrow = (props: {fun:Function}) => {
+export const DynamicArrow = (props: { fun: Function }) => {
   return (
     <div className={styles.normal}>
       <div className={styles.arrow}>

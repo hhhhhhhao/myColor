@@ -20,6 +20,10 @@ const config: IConfig = {
           component: './test/index',
         },
         {
+          path: '/two/fovea/index',
+          component: './two/fovea/index',
+        },
+        {
           path: '/two',
           component: './two/index',
         },

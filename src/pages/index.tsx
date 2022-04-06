@@ -1,4 +1,4 @@
-import React, { useRef,useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './index.less';
 import { GlobalModelIF } from '@/interfaces/global';
 import { connect } from 'dva';
@@ -8,21 +8,25 @@ import { debounce } from '@/utils/general';
 import { Two } from './two/index';
 import { Three } from './three/index';
 
-interface IndexProps extends Pick<GlobalModelIF, 'dispatch' | 'fold' | 'explainShow'> { }
+interface IndexProps extends Pick<GlobalModelIF, 'dispatch' | 'fold' | 'explainShow'> {}
 
 const Index = (props: IndexProps) => {
-  const scrollBarRef = useRef<any>(null)
-  const eyeOut = useRef<any>(null)
+  const scrollBarRef = useRef<any>(null);
+  const eyeOut = useRef<any>(null);
   const { dispatch, fold, explainShow } = props;
   //44
   //-669.6000366210938
   //-1383.2000732421875
   //-2096.800048828125
   //-2810.400146484375
-  const scrollToChangePange=(e:React.UIEvent<HTMLDivElement, UIEvent>) => {
+  const scrollToChangePange = (e: React.UIEvent<HTMLDivElement, UIEvent>) => {
     debounce(() => {
-      if (scrollBarRef.current===null || scrollBarRef.current.pageChange===null ) { return }
-      let curPositon=Math.ceil(Number(document.getElementById('mainPage1')?.getBoundingClientRect().y));
+      if (scrollBarRef.current === null || scrollBarRef.current.pageChange === null) {
+        return;
+      }
+      let curPositon = Math.ceil(
+        Number(document.getElementById('mainPage1')?.getBoundingClientRect().y),
+      );
       switch (curPositon) {
         case 48:
           scrollBarRef.current.pageChange(0);
@@ -37,11 +41,16 @@ const Index = (props: IndexProps) => {
           scrollBarRef.current.pageChange(3);
           break;
       }
-    }, 500)()
-  }
+    }, 500)();
+  };
   return (
     <div className={styles.normal}>
-      <div className={styles.scrollSnap} onScroll={(e)=>{scrollToChangePange(e)}}>
+      <div
+        className={styles.scrollSnap}
+        onScroll={e => {
+          scrollToChangePange(e);
+        }}
+      >
         <div className={styles.first} id="mainPage1">
           <Illustration></Illustration>
         </div>
